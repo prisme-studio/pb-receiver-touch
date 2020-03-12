@@ -6,9 +6,28 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		391EF6722419A50500698B17 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 391EF66F2419A50500698B17 /* main.cpp */; };
+		391EF6732419A50500698B17 /* Core.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 391EF6702419A50500698B17 /* Core.cpp */; };
+		391EF6762419A5F000698B17 /* libcommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 391EF6752419A5F000698B17 /* libcommon.a */; };
+		391EF6782419A5F000698B17 /* libnetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 391EF6772419A5F000698B17 /* libnetwork.a */; };
+		391EF67A2419A5F000698B17 /* libpb-common.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 391EF6792419A5F000698B17 /* libpb-common.a */; };
+		391EF67C2419A9B500698B17 /* libprotobuf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 391EF67B2419A9B500698B17 /* libprotobuf.a */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		391EF6622419A40300698B17 /* pb-receiver-touch.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pb-receiver-touch.plugin"; sourceTree = BUILT_PRODUCTS_DIR; };
 		391EF6652419A40300698B17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		391EF66D2419A4ED00698B17 /* CPlusPlus_Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPlusPlus_Common.h; sourceTree = "<group>"; };
+		391EF66E2419A4ED00698B17 /* CHOP_CPlusPlusBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHOP_CPlusPlusBase.h; sourceTree = "<group>"; };
+		391EF66F2419A50500698B17 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		391EF6702419A50500698B17 /* Core.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Core.cpp; sourceTree = "<group>"; };
+		391EF6712419A50500698B17 /* Core.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Core.hpp; sourceTree = "<group>"; };
+		391EF6752419A5F000698B17 /* libcommon.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libcommon.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		391EF6772419A5F000698B17 /* libnetwork.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libnetwork.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		391EF6792419A5F000698B17 /* libpb-common.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = "libpb-common.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		391EF67B2419A9B500698B17 /* libprotobuf.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libprotobuf.a; path = ../../../../../../usr/local/Cellar/protobuf/3.11.4/lib/libprotobuf.a; sourceTree = "<group>"; };
+		391EF67D2419AA1D00698B17 /* concurrentqueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = concurrentqueue.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -16,6 +35,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				391EF67C2419A9B500698B17 /* libprotobuf.a in Frameworks */,
+				391EF6762419A5F000698B17 /* libcommon.a in Frameworks */,
+				391EF6782419A5F000698B17 /* libnetwork.a in Frameworks */,
+				391EF67A2419A5F000698B17 /* libpb-common.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -27,6 +50,7 @@
 			children = (
 				391EF6642419A40300698B17 /* pb-receiver-touch */,
 				391EF6632419A40300698B17 /* Products */,
+				391EF6742419A5F000698B17 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -41,9 +65,34 @@
 		391EF6642419A40300698B17 /* pb-receiver-touch */ = {
 			isa = PBXGroup;
 			children = (
+				391EF6702419A50500698B17 /* Core.cpp */,
+				391EF6712419A50500698B17 /* Core.hpp */,
+				391EF66F2419A50500698B17 /* main.cpp */,
+				391EF66C2419A4DC00698B17 /* libs */,
 				391EF6652419A40300698B17 /* Info.plist */,
 			);
 			path = "pb-receiver-touch";
+			sourceTree = "<group>";
+		};
+		391EF66C2419A4DC00698B17 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				391EF67D2419AA1D00698B17 /* concurrentqueue.h */,
+				391EF66E2419A4ED00698B17 /* CHOP_CPlusPlusBase.h */,
+				391EF66D2419A4ED00698B17 /* CPlusPlus_Common.h */,
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
+		391EF6742419A5F000698B17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				391EF67B2419A9B500698B17 /* libprotobuf.a */,
+				391EF6752419A5F000698B17 /* libcommon.a */,
+				391EF6772419A5F000698B17 /* libnetwork.a */,
+				391EF6792419A5F000698B17 /* libpb-common.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -113,6 +162,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				391EF6732419A50500698B17 /* Core.cpp in Sources */,
+				391EF6722419A50500698B17 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,9 +287,15 @@
 				DEVELOPMENT_TEAM = KJ993GM677;
 				INFOPLIST_FILE = "pb-receiver-touch/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/Cellar/protobuf/3.11.4/lib,
+					/usr/local/lib,
+					/usr/local/Cellar/boost/1.72.0/lib,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "prisme.pb-receiver-touch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SYSTEM_HEADER_SEARCH_PATHS = /usr/local/include;
 				WRAPPER_EXTENSION = plugin;
 			};
 			name = Debug;
@@ -251,9 +308,15 @@
 				DEVELOPMENT_TEAM = KJ993GM677;
 				INFOPLIST_FILE = "pb-receiver-touch/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/Cellar/protobuf/3.11.4/lib,
+					/usr/local/lib,
+					/usr/local/Cellar/boost/1.72.0/lib,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "prisme.pb-receiver-touch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SYSTEM_HEADER_SEARCH_PATHS = /usr/local/include;
 				WRAPPER_EXTENSION = plugin;
 			};
 			name = Release;
