@@ -10,7 +10,6 @@
 #include <mutex>
 
 #include "libs/CHOP_CPlusPlusBase.h"
-#include "libs/concurrentqueue.h"
 
 #include <pb-common/common.hpp>
 #include <pb-common/Utils/PBReceiver.hpp>

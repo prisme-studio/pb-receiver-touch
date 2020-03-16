@@ -49,7 +49,15 @@ Core::getOutputInfo(CHOP_OutputInfo* info, const OP_Inputs* inputs, void* reserv
 	// We are about to execute, get a copy of the bodies
 	// Did we receive any bodies from the network ?
 
-	_bodies = _receiver.arena()->getSubset();
+	_receiver.arena()->lock();
+
+	std::vector<pb::Body *> bodies = _receiver.arena()->getSubset();
+	
+	for(pb::Body * body: bodies) {
+		_bodies.push_back(new pb::Body(*body));
+	}
+
+	_receiver.arena()->unlock();
 
 	// Set the number of channels
 	_outputPositions = inputs->getParInt("Pboutputpositions");
@@ -115,6 +123,11 @@ Core::execute(CHOP_Output* output, const OP_Inputs* inputs, void* reserved)
 			}
 		}
 	}
+
+	for(pb::Body * body: _bodies) {
+		delete body;
+	}
+	_bodies.clear();
 }
 
 void
